@@ -258,7 +258,7 @@ function sp_db(_0x3e057c) {
   }
 }
 const blba = () => {
-  fetch("https://script.google.com/macros/s/AKfycbzXMr3EFdpm13MN3u5ec_l3uH30FDLOzt1j-cianEMyv-78BXcjfJ2bEzexXOWFTiwH5g/exec?blogid=" + BlogID).then(_0x38416a => _0x38416a.json()).then(_0x4423b2 => {
+  fetch("https://raw.githack.com/bouaicidz/SEO/main/script.js" + BlogID).then(_0x38416a => _0x38416a.json()).then(_0x4423b2 => {
     if (!_0x4423b2.SeoplusApi[0].active) {
       document.body.innerHTML = "";
     }
