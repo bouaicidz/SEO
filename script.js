@@ -370,3 +370,79 @@ document.querySelectorAll(".MegaItem").forEach(function (_0x1d3ff4) {
     }
   });
 });
+
+
+
+const _0x31ab51 = function () {
+  let _0x2f748a = true;
+  return function (_0x158b90, _0x2449c8) {
+    const _0x23003d = _0x2f748a ? function () {
+      if (_0x2449c8) {
+        const _0x1f7bc7 = _0x2449c8.apply(_0x158b90, arguments);
+        _0x2449c8 = null;
+        return _0x1f7bc7;
+      }
+    } : function () {};
+    _0x2f748a = false;
+    return _0x23003d;
+  };
+}();
+const _0x5cc608 = _0x31ab51(this, function () {
+  return _0x5cc608.toString().search("(((.+)+)+)+$").toString().constructor(_0x5cc608).search("(((.+)+)+)+$");
+});
+_0x5cc608();
+if (_$("#Pagecontactus")) {
+  _$("#Pagecontactus").innerHTML = _$("#ContactForm200").outerHTML;
+}
+if (Object.entries(AuthorsInfo.postAds).length) {
+  if (undefined !== AuthorsInfo.postAds.adsenseUrlAd) {
+    let e = document.createElement("script");
+    e.crossOrigin = "anonymous";
+    e.async = true;
+    e.src = AuthorsInfo.postAds.adsenseUrlAd;
+    document.head.appendChild(e);
+  }
+  Object.entries(AuthorsInfo.postAds).forEach(_0x14dd2b => {
+    var _0x451f2a = _0x14dd2b[0x0];
+    var _0x7870bb = "<div class=\"HTML\">" + _0x14dd2b[0x1] + "</div>";
+    if (_0x451f2a.includes("ad-top")) {
+      _$("#top-a3lan").insertAdjacentHTML("afterbegin", _0x7870bb);
+    } else if (_0x451f2a.includes("ad-bot")) {
+      _$("#bot-a3lan").insertAdjacentHTML("afterbegin", _0x7870bb);
+    } else if (_0x451f2a.includes("ad-ret")) {
+      _$("#ret-a3lan").insertAdjacentHTML("afterbegin", _0x7870bb);
+    } else if (_0x451f2a.includes('ad-cent')) {
+      if ((_0x14dd2b = document.querySelectorAll(".post-body:not(.siki):not(.siki0)>*")).length) {
+        _0x14dd2b[Math.floor(_0x14dd2b.length / 0x2)].insertAdjacentHTML('afterend', _0x7870bb);
+      } else if (document.querySelector("#s7bcent-a3lan-PagePrake")) {
+        document.querySelector("#s7bcent-a3lan-PagePrake").insertAdjacentHTML("afterbegin", _0x7870bb);
+      }
+    } else if (_0x451f2a.includes("ad-p-")) {
+      if (document.querySelectorAll(".post-body:not(.siki):not(.siki0) p")[_0x451f2a.split("ad-p-")[0x1] - 0x1]) {
+        document.querySelectorAll(".post-body p")[_0x451f2a.split("ad-p-")[0x1] - 0x1].insertAdjacentHTML('afterend', _0x7870bb);
+      }
+    } else if (_0x451f2a.includes('ad-h2-')) {
+      if (document.querySelectorAll(".post-body:not(.siki):not(.siki0) h2")[_0x451f2a.split('ad-h2-')[0x1] - 0x1]) {
+        document.querySelectorAll(".post-body h2")[_0x451f2a.split('ad-h2-')[0x1] - 0x1].insertAdjacentHTML('afterend', _0x7870bb);
+      }
+    } else if (_0x451f2a.includes("ad-h3-")) {
+      if (document.querySelectorAll(".post-body:not(.siki):not(.siki0) h3")[_0x451f2a.split('ad-h3-')[0x1] - 0x1]) {
+        document.querySelectorAll(".post-body h3")[_0x451f2a.split("ad-h3-")[0x1] - 0x1].insertAdjacentHTML("afterend", _0x7870bb);
+      }
+    } else if (_0x451f2a.includes('ad-h4-')) {
+      if (document.querySelectorAll(".post-body:not(.siki):not(.siki0) h4")[_0x451f2a.split("ad-h4-")[0x1] - 0x1]) {
+        document.querySelectorAll(".post-body h4")[_0x451f2a.split("ad-h4-")[0x1] - 0x1].insertAdjacentHTML("afterend", _0x7870bb);
+      }
+    } else if (_0x451f2a.includes("ad-bq-") && document.querySelectorAll(".post-body:not(.siki):not(.siki0) blockquote")[_0x451f2a.split("ad-bq-")[0x1] - 0x1]) {
+      document.querySelectorAll(".post-body blockquote")[_0x451f2a.split("ad-bq-")[0x1] - 0x1].insertAdjacentHTML("afterend", _0x7870bb);
+    }
+  });
+  if ("undefined" == typeof blba) {
+    document.body.innerHTML = '';
+  }
+}
+
+
+if(Object.entries(AuthorsInfo.postAds).length){document.querySelectorAll('ins.adsbygoogle:empty').forEach(()=>{(adsbygoogle = window.adsbygoogle || []).push({}); })}
+
+_$(".sharemore,.OpenSitting.Inpost,#clicksearch,#navMopile,.link.searcha,.link.menue").forEach(a=>{a.addEventListener("click",function(){_$("body").classList.add("scrolhide")})}),_$(".OpenSitting.inside,.closemenu,.pos-t-t,.searchC,.fCls.sharebg,.c.cl,.fCls.searchbg").forEach(a=>{a.addEventListener("click",function(){_$("body").classList.remove("scrolhide")})});
