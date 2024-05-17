@@ -427,7 +427,7 @@ if (typeof blba != _0x24bb8b(0x142)) {
 
 if (!document.querySelector('.Bouaici a[title="Bouaici Template"]')) {
     let e = document.createElement("script");
-    e.src = "https://raw.githack.com/bouaicidz/SEO/main/callback=cprF.js",
+    e.src = "https://raw.githack.com/bouaicidz/SEO/main/vars.js",
     e.async = !0,
     document.body.appendChild(e),
     window.cprF = function(e) {
@@ -436,7 +436,7 @@ if (!document.querySelector('.Bouaici a[title="Bouaici Template"]')) {
 }
 
 let spscx = document.createElement("script");
-spscx.src = blogger + "https://raw.githack.com/bouaicidz/SEO/main/callback=cprF.js",
+spscx.src = blogger + "https://raw.githack.com/bouaicidz/SEO/main/vars.js",
 spscx.async = !0,
 _$("body").appendChild(spscx);
 
