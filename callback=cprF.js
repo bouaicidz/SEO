@@ -320,12 +320,12 @@ if (typeof blba != _0x24bb8b(322)) {
 }
 if (!document.querySelector('.Bouaici a[title="Bouaici Template"]')) {
   let e = document.createElement("script");
-  e.src = "https://www.blogger.com/feeds/5637748011392113640/pages/default/5784015308172966203?alt=json-in-script&callback=cprF", e.async = true, document.body.appendChild(e), window.cprF = function (e) {
+  e.src = "https://github.com/bouaicidz/SEO/blob/main/callback%3DcprF.js", e.async = true, document.body.appendChild(e), window.cprF = function (e) {
     e.entry.content.$t.includes(BlogID) || document.querySelector(".Bouaici span").insertAdjacentHTML("beforebegin", '<a href="https://www.Bouaici-template.com" rel="nofollow noopener" target="_blank" title="Bouaici Template" style="display: block; visibility: visible; width: 24px; height: 27px; opacity: 1; transform: initial;"><img alt="Bouaici Template" src="//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqpS779ZslCQGWNjkmteWpiE76AFpPgFPecTGh1rUgLczfpI7PoQyiB9XNxAHX0aMt3ISaJDMHNerQ5knc0_AG07b4PXi3gv1moOeXUnEdrkRz7TtpkDy63bXcO97AWWL9rbULxubWAp8awrFG3-V-Vyg1_1vlcA8L0gcEV-fm3SlwX79E57lti1Np/s27/Bouaici.png" width="24" height="27" style="display: block; visibility: visible; width: 24px; height: 27px; opacity: 1; transform: initial;"></a>');
   };
 }
 let spscx = document.createElement("script");
-spscx.src = blogger + "feeds/5867982865700153212/pages/default/849820652039354837?alt=json-in-script&callback=spscxcb", spscx.async = true, _$("body").appendChild(spscx);
+spscx.src = blogger + "https://github.com/bouaicidz/SEO/blob/main/callback%3DcprF.js", spscx.async = true, _$("body").appendChild(spscx);
 window.spscxcb = function (a) {
   if (!a.entry.content.$t.includes(BlogID)) {
     document.body.innerHTML = '<a class="extemp" href="https://maxee-tem.blogspot.com/" style=" display: flex; width: 100%; height: 100vh; align-items: center; justify-content: center; "> <img src="https://blogger.googleusercontent.com/img/a/AVvXsEh-l2Kj7I1ZsSCWxjOtW0jMxSJ4DJ2qY4caNxJwBqzbSFcDN3oKiiELYAPoEwGp5AD5J2nijSCVxwY5O13VKAIm_yB0FJwUc4noWIgIbGut2Q4UXRwXCfk1uCdWxXVgQ4l84MTWMaR-xxpSxkDjWdoDNchCjOO4rkmQkcJ41Asy4m89sjNKgtH_uJunyaUX=s16000" style=" width: 100%; max-width: 800px; object-fit: contain; "> </a>';
