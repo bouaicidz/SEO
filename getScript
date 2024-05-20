@@ -1,5 +1,231 @@
 
-      $getScript(Uf, function () {
+Element.prototype.appendElements = function (U, N) {
+  var M = this;
+  var t = document.createElement("template");
+  t.innerHTML = U;
+  Array.from(t.content.children).forEach(function (Q, E) {
+    if (Q.nodeName == "SCRIPT") {
+      var a = document.createElement("script");
+      if (Q.src != '') {
+        a.src = Q.src;
+      }
+      if (Q.async != undefined) {
+        a.async = Q.async;
+      }
+      if (Q.defer != undefined) {
+        a.defer = Q.defer;
+      }
+      if (Q.textContent != '') {
+        a.textContent = Q.textContent;
+      }
+      M[N](a);
+    } else {
+      M[N](Q);
+    }
+  });
+};
+(function () {
+  var U = function () {
+    var UI = true;
+    return function (Us, Uf) {
+      var Uo = UI ? function () {
+        if (Uf) {
+          var Ue = Uf.apply(Us, arguments);
+          Uf = null;
+          return Ue;
+        }
+      } : function () {};
+      UI = false;
+      return Uo;
+    };
+  }();
+  if (typeof _$ == "undefined") {
+    window._$ = $;
+  }
+  let M = new Array(26).fill(1).map((UI, Us) => String.fromCharCode(97 + Us));
+  let t = new Array(26).fill(1).map((UI, Us) => String.fromCharCode(65 + Us));
+  let Q = new RegExp("'" + M[1] + M[11] + M[14] + M[6] + t[8] + M[3] + "':.+?,");
+  let E = _$("#blogger-components").innerHTML.match(Q)[0].replace(/[^0-9]/g, '');
+  let i = false;
+  let a = window.location.href;
+  let V = typeof LicenseKey != "undefined" ? LicenseKey : false;
+  let X = Maxee["comment-sys"] || "blogger";
+  let K = Maxee["FB-app-ID"] || '';
+  let S = Maxee["disqus-ID"] || '';
+  let l = Maxee["max-results"] || 10;
+  let P = Maxee["max-intro"] || 7;
+  let z = Maxee["max-ticker"] || 7;
+  let u = Maxee["max-rel"] || 10;
+  let H = Maxee["rdct-time"] || 10;
+  let b = Maxee["rdct-exclude"] || '';
+  let g = Maxee["auto-redirect"] !== undefined ? Maxee["auto-redirect"] : false;
+  let y = Maxee["see-also"] !== undefined ? Maxee["see-also"] : true;
+  let c = Maxee["cool-comments"] !== undefined ? Maxee["cool-comments"] : true;
+  let T = Maxee["show-related"] !== undefined ? Maxee["related-posts"] : true;
+  let I = Maxee["show-nextprev"] !== undefined ? Maxee.nextprev : true;
+  let s = Maxee["lazy-load"] !== undefined ? Maxee["lazy-load"] : true;
+  let f = Maxee["sticky-nav"] !== undefined ? Maxee["sticky-nav"] : true;
+  let o = Maxee["menu-fixed"] !== undefined ? Maxee["menu-fixed"] : false;
+  let e = Maxee["topbar-fixed"] !== undefined ? Maxee["topbar-fixed"] : false;
+  let C = Maxee["repeat-midad"] !== undefined ? Maxee["repeat-midad"] : false;
+  let Z = Maxee["repeat-indexad"] !== undefined ? Maxee["repeat-indexad"] : 0;
+  let L = Maxee["support-webp"] !== undefined ? Maxee["support-webp"] : false;
+  let d = Maxee["blogger-api"] !== undefined ? Maxee["blogger-api"] : false;
+  let G = Maxee["old-blogger"] !== undefined ? Maxee["old-blogger"] : false;
+  let x = Maxee["redirect-inside"] !== undefined ? Maxee["redirect-inside"] : false;
+  let v = Maxee["redirect-page"];
+  let r = Maxee["authors-page"];
+  let B = ["khamsat", "mostaql", "tradent", "google-play", "messenger", "blogger"];
+  let w = {};
+  let J = String.fromCharCode(104, 116, 116, 112, 115, 58, 47, 47, 115, 99, 114, 105, 112, 116, 46, 103, 111, 111, 103, 108, 101, 46, 99, 111, 109, 47, 109, 97, 99, 114, 111, 115, 47, 115, 47, 65, 75, 102, 121, 99, 98, 120, 73, 75, 78, 0x4f, 66, 0x4f, 81, 0x6b, 0x71, 0x48, 0x6b, 0x6e, 0x4a, 0x34, 0x52, 0x49, 0x59, 0x37, 0x33, 0x68, 0x63, 0x2d, 0x66, 0x72, 0x52, 0x73, 0x49, 0x58, 0x69, 0x52, 0x61, 0x6f, 0x35, 0x33, 0x6a, 0x35, 0x75, 0x4a, 0x59, 0x4d, 0x78, 0x47, 0x70, 0x4b, 0x38, 0x42, 0x52, 0x32, 0x73, 47, 101, 120, 101, 99);
+  let h = false;
+  let k = false;
+  let q = false;
+  let W = false;
+  let A = false;
+  let Y = false;
+  if (typeof _bl != "undefined") {
+    _bl.each(function (UI, Us) {
+      w[UI.split(':')[0]] = parseInt(UI.split(':')[1]);
+    });
+  } else {
+    w = {};
+  }
+  PostCount = typeof PostCount != "undefined" ? PostCount : 0;
+  feed_count = Math.ceil(PostCount / 150);
+  AuthorsInfo = typeof AuthorsInfo != "undefined" ? AuthorsInfo : {};
+  U7();
+  U0();
+  U1();
+  UR();
+  Up();
+  if (f) {
+    UT();
+  }
+  if (isHomepage) {
+    UE();
+    Ui();
+  }
+  if (isSingleItem) {
+    U2();
+    UX();
+    UV();
+    Ua();
+  }
+  if (isPage) {
+    var D = 0;
+    UK();
+    UP();
+    if (!x) {
+      Uz();
+    }
+  }
+  if (isPost) {
+    if (y && !PagedPost) {
+      Uy();
+    }
+    Um();
+    Ub();
+    Ug();
+    if (I) {
+      UO();
+    } else {
+      _$(".topic-nav").remove();
+    }
+    if (T) {
+      Uc();
+    } else {
+      _$(".topic-related").remove();
+    }
+  }
+  if (isMultipleItems) {
+    if (!isHomepage) {
+      Ut();
+    }
+    if (!isArchive) {
+      UM();
+    }
+  }
+  function U0() {
+    if (!s) {
+      LazyImages("data-src", null, true);
+    }
+    _$("a[href]").each(function (UI) {
+      if (UI.href.includes("search/label/")) {
+        var Us = new URLSearchParams(UI.href).get("max-results");
+        if (Us) {
+          UI.href = UI.href.replace(Us, l);
+        } else {
+          UI.href = UI.href + "?max-results=" + l;
+        }
+      }
+    });
+    UN();
+    if (e) {
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 40) {
+          _$("header .color-wrap").addClass("fixed");
+        } else {
+          _$("header .color-wrap").removeClass("fixed");
+        }
+      });
+    }
+    if (o) {
+      const UI = _$("#LinkList302").offset().top + 60;
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > UI) {
+          _$("#menu-bar").addClass("fixed");
+        } else {
+          _$("#menu-bar").removeClass("fixed");
+        }
+      });
+    }
+    document.body.onclick = function (Us) {
+      if (Us.target && Us.target.hasClass("share-icon")) {
+        var Uf = Us.target;
+        Uf.toggleClass("arrow");
+        Uf.nextElementSibling.toggleClass("share-open");
+      }
+    };
+    _$(".scroll-top").onClick(function (Us) {
+      var Uf = {
+        "behavior": "smooth",
+        "top": 0x0,
+        "left": 0x0
+      };
+      window.scroll(Uf);
+    });
+    _$(".acc-head").onClick(function () {
+      this.siblings(".acc-head").each(function (Us) {
+        Us.removeClass("open");
+        Us.nextElementSibling.slideUp();
+      });
+      this.addClass("open");
+      this.nextElementSibling.slideDown();
+    });
+  }
+  function U1() {
+    if (SpeedFirst) {
+      UI();
+    } else {
+      window.oneScroll(UI);
+    }
+    function UI() {
+      var Us = _$("#blogger-components").innerHTML.replace(/(\<\!\-\-|\-\-\>)/g, '');
+      var Uf = Us.match(/http.+?widgets\.js/)[0];
+      var Ue = Us.match(/(\<|<)script type='text\/javascript'(\>|>)((.|\n)*)?(\<|<)\/script(\>|>)/g)[0].replace(/((\<|<)script type='text\/javascript'(\>|>)|(\<|<)\/script(\>|>))/g, '');
+      var UC = Us.match(/(\<|<)script(\>|>)(.|\n)*?(\<|<)\/script(\>|>)/g) || null;
+      var UZ = '';
+      q = true;
+      if (UC != null) {
+        $getScript("/js/cookienotice.js", function () {
+          UC[0].replace(/(\<script\>|\<\/script\>)/g, '').match(/(\(window|window).*/g).each(function (UL, Ud) {
+            UZ += UL;
+          });
+          eval(UZ);
+        });
+      }
+        $getScript(Uf, function () {
         eval(Ue);
         E = _WidgetManager._GetAllData().blog.blogId;
       });
